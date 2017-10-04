@@ -1,0 +1,21 @@
+{
+  "name": "footballApi",
+  "version": "0.0.1",
+  "description": "",
+  "main": "footballApi.js",
+  "dependencies": {
+    "moment": "^2.18.1",
+    "request": "^2.83.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://gogs.redirectme.net/julianvollmer/footballApi"
+  },
+  "keywords": [],
+  "author": "Julian Vollmer",
+  "license": "ISC"
+}
