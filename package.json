@@ -2,7 +2,7 @@
   "name": "football-data-api",
   "version": "0.0.2",
   "description": "",
-  "main": "main.js",
+  "main": "football.js",
   "dependencies": {
     "moment": "^2.18.1",
     "request": "^2.83.0"
