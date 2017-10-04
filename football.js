@@ -1,8 +1,8 @@
-var League = require('./league.js');
-var Team = require('./Team.js');
-var Fixtures = require('./fixtures.js');
-var Players = require('./players.js');
-var LeagueTable = require('./leagueTable.js');
+var League = require('./lib/league.js');
+var Team = require('./lib/Team.js');
+var Fixtures = require('./lib/fixtures.js');
+var Players = require('./lib/players.js');
+var LeagueTable = require('./lib/leagueTable.js');
 
 function Football(options, callback) {
 

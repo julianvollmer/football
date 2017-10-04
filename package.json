@@ -1,8 +1,8 @@
 {
-  "name": "footballApi",
+  "name": "football-data-api",
   "version": "0.0.1",
   "description": "",
-  "main": "footballApi.js",
+  "main": "main.js",
   "dependencies": {
     "moment": "^2.18.1",
     "request": "^2.83.0"
@@ -13,9 +13,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://gogs.redirectme.net/julianvollmer/footballApi"
+    "url": "https://github.com/julianvollmer/football"
   },
   "keywords": [],
   "author": "Julian Vollmer",
-  "license": "ISC"
+  "license": "MIT License"
 }
