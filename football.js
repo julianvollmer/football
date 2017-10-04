@@ -38,7 +38,8 @@ function Football(options, callback) {
 	}
 
 	this.isInitialized = function () {
-		callback();
+		if(callback)
+			callback();
 	}
 
 	this.initLeague();
