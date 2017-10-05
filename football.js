@@ -1,5 +1,5 @@
 var League = require('./lib/league.js');
-var Team = require('./lib/Team.js');
+var Team = require('./lib/team.js');
 var Fixtures = require('./lib/fixtures.js');
 var Players = require('./lib/players.js');
 var LeagueTable = require('./lib/leagueTable.js');
