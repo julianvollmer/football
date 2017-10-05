@@ -1,8 +1,9 @@
 var League = require('./lib/league.js');
-var Team = require('./lib/team.js');
+var Team = require('./lib/Team.js');
 var Fixtures = require('./lib/fixtures.js');
 var Players = require('./lib/players.js');
 var LeagueTable = require('./lib/leagueTable.js');
+var Helper = require('./lib/helper.js');
 
 function Football(options, callback) {
 
@@ -12,6 +13,7 @@ function Football(options, callback) {
 	this.team = null;
 	this.fixtures = null;
 	this.players = null;
+	this.helper = new Helper();
 
 	var self = this;
 	
@@ -38,8 +40,7 @@ function Football(options, callback) {
 	}
 
 	this.isInitialized = function () {
-		if(callback)
-			callback();
+		callback();
 	}
 
 	this.initLeague();
