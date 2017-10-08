@@ -3,7 +3,7 @@ first version
 
 ```js
 var Football = require('football-data-api');
-var token = '510c84ef31ca4bb6b7b989b3b1e7d381'
+var token = 'YOUR_TOKEN'
 var options = { 
     url: 'http://api.football-data.org/v1/soccerseasons/', 
     headers: {'X-Auth-Token': token},
