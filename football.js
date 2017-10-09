@@ -50,6 +50,14 @@ function Football(options, callback, isMyTeam) {
 
 	this.initOpponent = function () {
 		options.url = self.baseUrl
+		
+		if(self.options.shortNameTeam == self.team.getShortNameFromLongName(self.fixtures.getNextGame().homeTeamName)){
+			self.options.shortNameTeam = self.team.getShortNameFromLongName(self.fixtures.getNextGame().awayTeamName);
+		}
+		else{
+			self.options.shortNameTeam = self.team.getShortNameFromLongName(self.fixtures.getNextGame().homeTeamName);	
+		}
+		
 		self.opponent = new Football(options, callback);
 	}
 
