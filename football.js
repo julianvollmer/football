@@ -5,7 +5,7 @@ var Players = require('./lib/players.js');
 var LeagueTable = require('./lib/leagueTable.js');
 var Helper = require('./lib/helper.js');
 
-function Football(options, callback) {
+function Football(options, callback, isMyTeam) {
 
 	this.options = options;
 	this.league = null;
@@ -14,10 +14,13 @@ function Football(options, callback) {
 	this.fixtures = null;
 	this.players = null;
 	this.helper = new Helper();
+	this.baseUrl = options.url;
+	this.opponent = null;
 
 	var self = this;
 	
 	this.initLeague = function () {
+		options.url = self.baseUrl;
 		self.league = new League(options, self.initTeam);
 	}
 
@@ -36,7 +39,18 @@ function Football(options, callback) {
 
 	this.initLeagueTable = function () {
 		options.url = self.league.league._links.leagueTable.href
-		self.leagueTable = new LeagueTable(options, self.isInitialized);
+		if(isMyTeam){
+			self.leagueTable = new LeagueTable(options, self.initOpponent);
+		}
+		else{
+			self.leagueTable = new LeagueTable(options, self.isInitialized);	
+		}
+		options.url = self.baseUrl;
+	}
+
+	this.initOpponent = function () {
+		options.url = self.baseUrl
+		self.opponent = new Football(options, callback);
 	}
 
 	this.isInitialized = function () {
@@ -50,7 +64,6 @@ function Football(options, callback) {
 			
 		}
 	}
-
 	this.initLeague();
 }
 
