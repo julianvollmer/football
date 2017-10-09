@@ -1,6 +1,6 @@
 {
   "name": "football-data-api",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "",
   "main": "football.js",
   "dependencies": {
