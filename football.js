@@ -40,8 +40,15 @@ function Football(options, callback) {
 	}
 
 	this.isInitialized = function () {
-		if(callback)
-			callback();
+		if(callback){
+			if(callback.callback){
+				callback.callbackFromFootballApi();
+			}
+			else{
+				callback();
+			}
+			
+		}
 	}
 
 	this.initLeague();
