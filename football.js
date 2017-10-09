@@ -41,7 +41,7 @@ function Football(options, callback) {
 
 	this.isInitialized = function () {
 		if(callback){
-			if(callback.callback){
+			if(callback.callbackFromFootballApi){
 				callback.callbackFromFootballApi();
 			}
 			else{
